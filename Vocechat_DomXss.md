@@ -40,9 +40,9 @@ As deployed in testing: container `vocechat-server`, image `privoce/vocechat-ser
 http://localhost:3001/widget.html?welcome=<img src=x onerror="alert(JSON.stringify(localStorage))">
 ```
 
-**Result (redacted):**
+**Result (redacted):*
 
-![PoC: alert() dumping localStorage including VOCECHAT_TOKEN](images/20260922211115_92_163.png)
+![PoC: alert() dumping localStorage including VOCECHAT_TOKEN](20260922211115_92_163.png)
 
 
 > The captured value is a complete, valid session JWT (`VOCECHAT_TOKEN`) plus the associated user ID. An attacker in possession of this token can impersonate the victim without needing their password, i.e. full account/session takeover — not just data disclosure.
